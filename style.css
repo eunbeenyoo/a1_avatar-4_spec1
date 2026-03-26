@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6f96c2;
+  line-height: 1.7;
+}
+
+/* hero artwork */
+.hero-art {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+#canvas-container {
+  width: 100%;
+  height: 100%;
+}
+
+#canvas-container canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* overall page */
+.page {
+  width: min(1200px, 90vw);
+  margin: 0 auto;
+  padding: 80px 0 120px;
+}
+
+/* title area */
+.title-block {
+  margin-bottom: 90px;
+}
+
+.small-label {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9fc2e5;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3.4rem, 8vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  color: #5c90d7;
+}
+
+.intro {
+  max-width: 620px;
+  margin-top: 24px;
+  font-size: 1.08rem;
+  color: #89add2;
+}
+
+/* two-column sections */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  margin-bottom: 110px;
+}
+
+.text-block,
+.description-section {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.vertical-label {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #7ca8d7;
+}
+
+.text-content h2,
+.description-content h2 {
+  margin: 0 0 18px;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  color: #5c90d7;
+}
+
+.text-content p,
+.description-content p {
+  margin: 0 0 22px;
+  font-size: 1.02rem;
+  color: #7ea3cd;
+  max-width: 520px;
+}
+
+.quote {
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.credit {
+  color: #9bb8d9;
+}
+
+.cta {
+  margin-top: 18px;
+  font-weight: 600;
+  color: #5c90d7;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .text-block,
+  .description-section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .vertical-label {
+    writing-mode: horizontal-tb;
+    letter-spacing: 0.14em;
+  }
+
+  .page {
+    padding: 56px 0 80px;
+  }
+}
