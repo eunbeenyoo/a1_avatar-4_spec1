@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   background: #ffffff;
@@ -14,10 +10,10 @@ body {
   line-height: 1.7;
 }
 
-/* hero artwork */
+/* 🔥 HERO - 정확한 16:9 고정 */
 .hero-art {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9; /* 핵심 */
   overflow: hidden;
   background: #ffffff;
 }
@@ -27,26 +23,27 @@ body {
   height: 100%;
 }
 
+/* 🔥 canvas가 꽉 차도록 */
 #canvas-container canvas {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* overall page */
+/* 페이지 */
 .page {
-  width: min(1200px, 90vw);
+  width: min(1100px, 90vw);
   margin: 0 auto;
   padding: 80px 0 120px;
 }
 
-/* title area */
+/* 타이틀 */
 .title-block {
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 .small-label {
-  margin: 0 0 16px;
   font-size: 0.9rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -55,95 +52,69 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(3.4rem, 8vw, 7rem);
-  line-height: 0.92;
-  letter-spacing: -0.05em;
+  font-size: clamp(3rem, 7vw, 6rem);
   color: #5c90d7;
 }
 
-.intro {
-  max-width: 620px;
-  margin-top: 24px;
-  font-size: 1.08rem;
-  color: #89add2;
+.cta {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #5c90d7;
 }
 
-/* two-column sections */
+/* 레이아웃 */
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  margin-bottom: 110px;
+  gap: 60px;
+  margin-bottom: 100px;
 }
 
 .text-block,
 .description-section {
   display: grid;
   grid-template-columns: 70px 1fr;
-  gap: 24px;
-  align-items: start;
+  gap: 20px;
 }
 
+/* 세로 라벨 */
 .vertical-label {
-  margin: 0;
-  font-size: 0.95rem;
-  letter-spacing: 0.2em;
-  text-transform: lowercase;
   writing-mode: vertical-rl;
-  text-orientation: mixed;
   color: #7ca8d7;
+  font-size: 0.9rem;
 }
 
+/* 텍스트 */
 .text-content h2,
 .description-content h2 {
-  margin: 0 0 18px;
-  font-size: 1.9rem;
-  line-height: 1.1;
   color: #5c90d7;
 }
 
 .text-content p,
 .description-content p {
-  margin: 0 0 22px;
-  font-size: 1.02rem;
   color: #7ea3cd;
-  max-width: 520px;
 }
 
 .quote {
-  font-size: 1.08rem;
-  line-height: 1.8;
+  font-style: italic;
 }
 
 .credit {
   color: #9bb8d9;
 }
 
-.cta {
-  margin-top: 18px;
-  font-weight: 600;
-  color: #5c90d7;
-}
-
-/* responsive */
+/* 모바일 */
 @media (max-width: 900px) {
   .two-column {
     grid-template-columns: 1fr;
-    gap: 50px;
   }
 
   .text-block,
   .description-section {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
 
   .vertical-label {
     writing-mode: horizontal-tb;
-    letter-spacing: 0.14em;
-  }
-
-  .page {
-    padding: 56px 0 80px;
   }
 }
