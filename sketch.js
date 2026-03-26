@@ -48,7 +48,7 @@ function drawPlasticFlows() {
 
 function getPlasticStartPoint() {
   let side = floor(random(10)); // mostly top, sometimes sides
-  let offsetAmount = random(-120, 120); // small position shift
+  let offsetAmount = random(-90, 90); // small position shift
 
   if (side === 0) {
     return createVector(
