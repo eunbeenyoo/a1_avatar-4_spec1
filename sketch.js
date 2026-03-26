@@ -140,7 +140,7 @@ function savePlasticSpot(x, y) {
 // ------------------------
 
 function drawBlueDots() {
-  let step = 13; // spacing between dots
+  let step = 8; // spacing between dots
   noStroke(); // dots without outline
 
   for (let y = 0; y < height; y += step) { // row by row
