@@ -10,7 +10,6 @@ body {
   line-height: 1.7;
 }
 
-/* 🔥 HERO - 정확한 16:9 고정 */
 .hero-art {
   width: 100%;
   aspect-ratio: 16 / 9; /* 핵심 */
@@ -23,7 +22,6 @@ body {
   height: 100%;
 }
 
-/* 🔥 canvas가 꽉 차도록 */
 #canvas-container canvas {
   display: block;
   width: 100%;
@@ -103,7 +101,6 @@ h1 {
   color: #9bb8d9;
 }
 
-/* 모바일 */
 @media (max-width: 900px) {
   .two-column {
     grid-template-columns: 1fr;
