@@ -14,10 +14,9 @@ body {
   line-height: 1.7;
 }
 
-/* hero artwork */
 .hero-art {
   width: 100%;
-  min-height: 100vh;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #ffffff;
 }
